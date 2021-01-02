@@ -1,0 +1,24 @@
+$psemi : "poppins semi";
+$plight : "poppins light";
+$pmedium : "poppins medium";
+$pregular : "poppins regular";
+
+@font-face{
+    font-family: $psemi;
+    src: url("../fonts/poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face{
+    font-family: $plight;
+    src: url("../fonts/poppins/Poppins-Light.ttf");
+}
+
+@font-face{
+    font-family: $pmedium;
+    src: url("../fonts/poppins/Poppins-Medium.ttf");
+}
+
+@font-face{
+    font-family: $pregular;
+    src: url("../fonts/poppins/Poppins-Regular.ttf");
+}

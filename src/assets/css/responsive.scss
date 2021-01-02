@@ -1,0 +1,488 @@
+@import "allMixin";
+
+/* for tablet */
+@media screen and (max-width: 1000px){
+    #collections, #product, #promo, #news{
+        padding: 100px 50px 0px 50px;
+
+        header{
+            padding-bottom: 50px;
+        }
+    }
+
+    item-collection-primary{
+        flex-basis: 100%;
+    }
+
+    item-collection{
+        flex-basis: 48.3%;
+    }
+
+    #product list-product item-product{
+        flex-basis: 48.7%;
+    }
+
+    #promo article figure img{
+        width: 80%;
+    }
+
+    #news{
+        padding: 100px 50px;
+    }
+
+    list-news {
+        @include setLocation(flex, row, space-between);
+        flex-wrap: wrap;
+    }
+
+    item-news{
+        flex-basis: 48%;
+        margin-bottom: 30px;
+    }
+
+    #bio article{
+        padding: 0px 50px 0px 0px;
+    }
+}
+
+@media screen and (max-width: 859px){
+    #news section figure img{
+        width: 269px;
+    }
+}
+
+/* for smartphone */
+@media screen and (max-width: 693px){
+    top-header{
+        padding: 0px 25px;
+        flex-wrap: wrap;
+    }
+
+    #menu{
+        flex-basis: 5%;
+        @include setLocation(flex, row, flex-end);
+        padding: 25px 0px;
+    }
+
+    nav{
+        flex-basis: 100%;
+        display: none;
+
+        ul{
+            flex-basis: 100%;
+            @include setLocation2(flex, column);
+
+            li{
+                flex-basis: 100%;
+                @include setLocation(flex, column, center);
+                align-items: center;
+                padding: 0px;
+
+                a{
+                    padding: 20px 100%;
+
+                    &:hover{
+                        background-color: #E4F6FA;
+                    }
+                }
+            }
+        }
+
+        &.show{
+            display: flex;
+        }
+    }
+
+    bottom-header{
+        padding-left: 25px;
+
+        h1{
+            font-size: 50px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        a{
+            font-size: 13px;
+        }
+    }
+
+
+    #collections, #product, #promo, #news{
+        padding: 100px 25px 0px 25px;
+
+        header{
+            padding-bottom: 50px;
+
+            h2{
+                font-size: 22px;
+                padding-bottom: 5px;
+            }
+
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+
+    aside h2{
+        font-size: 22px;
+        padding-bottom: 5px;
+    }
+
+    item-collection-primary{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .detail-item-primary{
+        padding: 55px 20px 50px 10px;
+
+        h3{
+            font-size: 18px;
+        }
+
+        p{
+            font-size: 13px;
+        }
+
+        a{
+            font-size: 13px;
+        }
+
+        img{
+            flex-basis: 5%;
+        }
+    }
+
+    item-collection{
+        flex-basis: 47.7%;
+        padding-bottom: 20px;
+
+        h3{
+            font-size: 18px;
+        }
+
+        a{
+            font-size: 13px;
+        }
+    }
+
+    #product{
+        header li a{
+            font-size: 13px;
+            padding-right: 25px;
+        }
+
+        list-product item-product{
+            flex-basis: 47.7%;
+
+            h3{
+                font-size: 14px;
+            }
+
+            h3+p{
+                font-size: 12px;
+            }
+        }
+
+        footer a{
+            font-size: 12px;
+        }
+    }
+
+    .new{
+        font-size: 11px;
+    }
+
+    #promo{
+        header+article{
+            flex-basis: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            figure{
+                flex-basis: 100%;
+            }
+
+            figure+article{
+                flex-basis: 100%;
+                padding: 20px 0px 0px 0px;
+
+                p:nth-child(1){
+                    font-size: 15px;
+                }
+
+                h2{
+                    font-size: 28px;
+                }
+
+                h2+p{
+                    font-size: 14px;
+                }
+
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+
+    #news{
+        padding: 100px 25px;
+    }
+
+    list-news{
+        @include setLocation2(flex, column);
+    }
+
+    item-news{
+        flex-basis: 100%;
+
+        h3{
+            font-size: 15px;
+        }
+
+        p{
+            font-size: 13px;
+            padding-bottom: 30px;
+        }
+
+        a{
+            font-size: 12px;
+        }
+    }
+
+    #advertisement{
+        h2{
+            font-size: 29px;
+            padding-bottom: 4px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        input{
+            font-size: 12px;
+        }
+
+        button{
+            font-size: 12px;
+        }
+    }
+
+    #bio{
+        flex-wrap: wrap;
+
+        header{
+            flex-basis: 100%;
+            padding-bottom: 30px;
+        }
+
+        article{
+            flex-basis: 100%;
+            align-items: center;
+            padding: 0px 25px;
+
+            h3{
+                font-size: 15px;
+            }
+
+            p{
+                font-size: 13px;
+                text-align: center;
+            }
+
+            li a{
+                font-size: 13px;
+            }
+        }
+    }
+
+    main+footer{
+        padding: 15px 25px;
+    }
+
+    author-footer p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 461px){
+    bottom-header{
+        h1{
+            font-size: 40px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+
+    #button-signup a{
+        font-size: 12px;
+    }
+
+    #collections, #product, #promo, #news, aside h2{
+        header{
+            h2{
+                font-size: 21px;
+                padding-bottom: 3px;
+            }
+        }
+    }
+
+    item-collection-primary{
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    #collections, #promo, #news{
+        header p{
+            font-size: 12px;
+        }
+    }
+
+    item-collection-primary figure{
+        padding: 50px 0px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .detail-item-primary{
+        h3{
+            font-size: 17px;
+        }
+
+        p{
+            font-size: 12px;
+        }
+
+        img{
+            flex-basis: 4%;
+        }
+    }
+
+
+    item-collection{
+        flex-basis: 100%;
+        padding-bottom: 15px;
+
+        h3{
+            font-size: 17px;
+            padding: 15px 0px 0px 25px;
+        }
+
+        a{
+            font-size: 12px;
+            padding: 0px 25px 15px 0px;
+        }
+    }
+
+    #product{
+        header li a{
+            font-size: 12px;
+        }
+
+        list-product item-product{
+            flex-basis: 100%;
+            margin-bottom: 30px;
+
+            h3{
+                font-size: 13px;
+            }
+    
+            h3+p{
+                font-size: 11px;
+            }
+        }
+
+        footer a{
+            font-size: 11px;
+        }
+    }
+
+    .new{
+        font-size: 10px;
+    }
+
+    #promo figure+article{
+        p:nth-child(1){
+            font-size: 14px;
+        }
+
+        h2{
+            font-size: 27px;
+        }
+
+        h2+p{
+            font-size: 13px;
+        }
+
+        a{
+            font-size: 13px;
+        }
+    }
+
+
+    #news item-news{
+        h3{
+            font-size: 14px;
+        }
+
+        p{
+            font-size: 12px;
+            padding-bottom: 30px;
+        }
+
+        a{
+            font-size: 11px;
+        }
+    }
+
+    #advertisement{
+        h2{
+            font-size: 25px;
+            text-align: center;
+            padding-bottom: 4px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+
+        input{
+            font-size: 11px;
+            width: 200px;
+        }
+
+        button{
+            font-size: 11px;
+        }
+    }
+
+
+    #bio article{
+        h3{
+            font-size: 14px;
+        }
+        
+        p{
+            font-size: 13px;
+        }
+    
+        li a{
+            font-size: 13px;
+        }
+    }
+
+    author-footer p{
+        font-size: 9px;
+    }
+}

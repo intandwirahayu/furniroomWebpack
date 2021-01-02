@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniroom Marketplace #1</title>
+</head>
+<body>
+    <header>
+        <top-header></top-header>
+
+        <bottom-header></bottom-header>
+    </header>
+    
+    <main>
+        <div id="content">
+            <article id="collections">
+                <header>
+                    <h2>Our Collections</h2>
+                    <p>available various kind of furniture collections</p>
+                </header>
+
+                <article>
+                    <item-collection-primary
+                        src = "src/assets/images/collection-1.png",
+                        headingTop = "Sofa",
+                        headingBottom = "Collections",
+                        totalItem = "500"
+                    ></item-collection-primary>
+
+                    <item-collection
+                        heading = "Lamp",
+                        src = "src/assets/images/collection-2.png",
+                        totalItem = "400"
+                    ></item-collection>
+
+                    <item-collection
+                        heading = "Table",
+                        src = "src/assets/images/collection-3.png",
+                        totalItem = "300"
+                    ></item-collection>
+
+                    <item-collection
+                        heading = "Chair",
+                        src = "src/assets/images/collection-4.png",
+                        totalItem = "200"
+                    ></item-collection>
+
+                    <item-collection
+                        heading = "Pot Plant",
+                        src = "src/assets/images/collection-5.png",
+                        totalItem = "100"
+                    ></item-collection>
+
+                    <item-collection-primary
+                        src = "src/assets/images/collection-6.png",
+                        headingTop = "Bed",
+                        headingBottom = "Collections",
+                        totalItem = "600"
+                    ></item-collection-primary>
+                </article>
+            </article>
+
+            <article id="product">
+                <header>
+                    <h2>Most Product</h2>
+                    <ul>
+                        <li><a href="#">furniture</a></li>
+                        <li><a href="#">accessories</a></li>
+                        <li><a href="#">decoration</a></li>
+                    </ul>
+                </header>
+
+                <list-product></list-product>
+
+                <footer>
+                    <a href="">GO TO SHOP</a>
+                </footer>
+            </article>
+
+            <article id="promo">
+                <header>
+                    <h2>Promo Today</h2>
+                    <p>available various kind of promo furniture</p>
+                </header>
+
+                <article>
+                    <figure>
+                        <img src="src/assets/images/promo.png">
+                    </figure>
+
+                    <article>
+                        <p id="discount">50% OFF</p>
+                        <h2>Grey Sofa<br>Fabric Two Seater</h2>
+                        <p>Get comfort you can literally sink into with this classically styled, overstuffed sofa.</p>
+                        <a href="">SHOP NOW</a>
+                    </article>
+                </article>
+            </article>
+
+            <article id="news">
+                <header>
+                    <h2>Lates News</h2>
+                    <p>available various kind of news furniture</p>
+                </header>
+
+                <list-news></list-news>
+            </article>
+
+            <article id="advertisement">
+                <h2>Keep Update & Get Discount</h2>
+                <p>Sign up your account for our newsletter</p>
+                <form action="" method="POST">
+                    <input type="text" name="" placeholder="enter your email address here">
+                    <button>SIGN UP</button>
+                </form>
+            </article>
+        </div>
+
+        <aside>
+            <article id="bio">
+                <header>
+                    <h2>Special My Bio</h2>
+                </header>
+    
+                <article>
+                    <figure>
+                        <img src="src/assets/images/image-bio.svg">
+                    </figure>
+                    
+                    <h3>Intan Dwi Rahayu</h3>
+                    <p>Hi all.. My name is Intan.</p>
+                    <p>I was born in Jakarta, February 20th 1999.</p>
+                    <p>Currently, I live in Kampung Kelapa RT 001/005 number 14, Citayam, Jawa Barat.</p>
+    
+                    <p class="text-visit">visit my social media to see my other work</p>
+                    <ul>
+                        <li><a href=""><img src="src/assets/images/instagram-logo.svg"><span>indwra</span></a></li>
+                        <li><a href=""><img src="src/assets/images/youtube-logo.svg"><span>Intan Dwi Rahayu</span></a></li>
+                    </ul>
+                </article>
+            </article>
+        </aside>
+    </main>
+
+    <footer>
+        <h4>Furniroom</h4>
+        <author-footer></author-footer>
+    </footer>
+</body>
+</html>

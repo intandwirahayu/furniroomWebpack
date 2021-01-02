@@ -1,0 +1,21 @@
+@mixin setFont($family, $size, $color){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin setLocation($display, $direction, $justify){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@mixin setLocation2($display, $direction){
+    display: $display;
+    flex-direction: $direction;
+}
+
+@mixin setLocation3($display, $align){
+    display: $display;
+    align-items: $align;
+}

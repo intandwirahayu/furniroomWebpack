@@ -1,0 +1,520 @@
+@import "allFont";
+@import "allMixin";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    max-width: 1366px;
+    display: inline;
+}
+
+top-header{
+    width: 100%;
+    @include setLocation(flex, row,space-between);
+    background-color: white;
+    padding: 0px 50px;
+    box-shadow: 0px 1px 6px rgba(50, 56, 70, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    h2{
+        flex-basis: 8%;
+        @include setLocation3(flex, center);
+        @include setFont($pmedium, 19px,#323846);
+    }
+}
+
+nav{
+    flex-basis: 85%;
+    @include setLocation(flex, row, flex-end);
+
+    li{
+        display: inline-block;
+        padding: 25px 0px 25px 30px;
+
+        a{
+            @include setFont($plight, 14px,#323846);
+            text-decoration: none;
+            transition: all 0.5s ease;
+
+            &:hover{
+                font-family: $plight;
+            }
+        }
+    }
+}
+
+#menu{
+    display: none;
+
+    img{
+        width: 20px;
+    }
+}
+
+bottom-header{
+    max-width: 1366px;
+    @include setLocation(flex, column, center);
+    flex-basis: 100%;
+    height: 89vh;
+    padding-left: 50px;
+    background-image: url("../images/background_header.png");
+    background-position: center;
+    position: relative;
+
+    h1{
+        @include setFont($psemi, 60px,#323846);
+    }
+
+    p{
+        @include setFont($plight, 16px,#323846);
+        padding-bottom: 50px;
+    }
+}
+
+#button-signup{
+    a{
+        @include setFont($pmedium, 14px,#323846);
+        text-decoration: none;
+        background-color: #FCE86D;
+        padding: 10px 20px;
+        transition: all 0.5s ease;
+
+        &:hover{
+            padding: 10px 30px;
+        }
+    }
+}
+
+main{
+    max-width: 1366px;
+    @include setLocation2(flex, column);
+}
+
+#collections, #product, #promo, #news{
+    flex-basis: 100%;
+    @include setLocation2(flex, column);
+    padding: 120px 50px 0px 50px;
+
+    header{
+        padding-bottom: 70px;
+
+        h2{
+            @include setFont($pregular, 23px,#323846);
+            padding-bottom: 10px;
+        }
+    }
+}
+
+#collections, #promo, #news{
+    header p{
+        @include setFont($plight, 14px,#323846);
+    }
+    
+}
+
+#collections, #product, #news{
+    article{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        @include setLocation(flex, row, space-between);
+    }
+}
+
+item-collection-primary{
+    flex-basis: 49%;
+    @include setLocation(flex, row, center);
+    padding-bottom: 25px;
+    transition: all 0.5s ease;
+
+    figure{
+        flex-basis: 60%;
+        background-color: #E4F6FA;
+        @include setLocation(flex, row, center);
+        padding: 50px 20px;
+    }
+}
+
+.detail-item-primary{
+    flex-basis: 40%;
+    background-color: #E4F6FA;
+    @include setLocation(flex, column, center);
+    padding: 55px 20px 50px 20px;
+
+    h3{
+        flex-basis: 100%;
+        @include setFont($pregular, 19px,#323846);
+    }
+
+    p{
+        flex-basis: 100%;
+        @include setFont($plight, 14px,#323846);
+        padding-bottom: 40px;
+    }
+
+    a{
+        flex-basis: 100%;
+        @include setFont($pmedium, 14px,#323846);
+        text-decoration: none;
+    }
+
+    img{
+        flex-basis: 6%;
+        margin-left: 2px;
+    }
+}
+
+item-collection{
+    flex-basis: 23.5%;
+    @include setLocation(flex, column, center);
+    padding-bottom: 25px;
+
+    h3{
+        flex-basis: 100%;
+        @include setFont($pregular, 19px,#323846);
+        background-color: #FEF4B9;
+        padding: 20px 0px 0px 30px;
+    }
+
+    figure{
+        flex-basis: 100%;
+        background-color: #FEF4B9;
+        @include setLocation(flex, row, center);
+        padding: 15px 0px;
+    }
+
+    a{
+        flex-basis: 100%;
+        padding: 0px 30px 20px 0px;
+        background-color: #FEF4B9;
+        @include setFont($plight, 14px, #323846);
+        text-decoration: none;
+        text-align: right;
+    }
+}
+
+#product{
+    header ul{
+        flex-basis: 100%;
+
+        li{
+            display: inline-block;
+
+            a{
+                @include setFont($plight, 14px,rgb(50, 56, 70));
+                text-decoration: none;
+                padding-right: 50px;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+    list-product{
+        @include setLocation(flex, row, space-between);
+        flex-wrap: wrap;
+
+        item-product{
+            flex-basis: 23.5%;
+            @include setLocation(flex, column, center);
+            padding-bottom: 10px;
+            margin-bottom: 60px;
+            transition: all 0.5s ease;
+
+            &:hover .hover-shopping{
+                opacity: 1;
+            }
+
+            figure{
+                flex-basis: 100%;
+                background-color: #F9F9F9;
+                @include setLocation(flex, row, center);
+                padding: 50px 0px;
+                position: relative;
+            }
+
+            h3{
+                flex-basis: 100%;
+                @include setFont($pregular, 15px, #323846);
+                text-align: center;
+                padding: 15px 0px 3px 0px;
+            }
+
+            h3+p{
+                flex-basis: 100%;
+                @include setFont($pregular, 13px, #989BA2);
+                text-align: center;
+            }
+        }
+    }
+
+    footer{
+        flex-basis: 100%;
+        @include setLocation(flex, row, center);
+
+        a{
+            @include setFont($pmedium, 13px, #323846);
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #323846;
+            transition: all 0.5s ease;
+
+            &:hover{
+                padding: 10px 40px;
+                background-color: #96D6F1;
+            }
+        }
+    }
+}
+
+.new{
+    flex-basis: 17%;
+    padding: 2px 13px;
+    background-color: #96D6F1;
+    @include setFont($plight, 12px, white);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.hover-shopping{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 249, 249, 0.6);
+    position: absolute;
+    top: 0;
+    @include setLocation(flex, row, center);
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    a{
+        display: block;
+        padding: 11px 15px;
+        border-radius: 50%;
+        background-color: #FCE86D;
+    }
+}
+
+#promo header+article{
+    flex-basis: 100%;
+    @include setLocation(flex, row, space-between);
+
+    figure{
+        flex-basis: 50%;
+        @include setLocation(flex, row, center);
+        align-items: center;
+        padding: 70px 0px;
+        background-color: #FEF4B9;
+    }
+
+    figure+article{
+        flex-basis: 45%;
+        @include setLocation(flex, column, center);
+        padding-left: 20px;
+
+        p:nth-child(1){
+            @include setFont($pmedium, 16px, #F94A6D);
+        }
+
+        h2{
+            @include setFont($pregular, 30px, #323846);
+        }
+
+        h2+p{
+            @include setFont($plight, 15px, #323846);
+            padding: 10px 0px 40px 0px;
+        }
+
+        a{
+            @include setFont($plight, 15px, #323846);
+        }
+    }
+}
+
+#news{
+    padding-bottom: 120px;
+}
+
+.readMoreNews{
+    display: flex;
+
+    a{
+        @include setFont($plight, 13px, #323846);
+        text-decoration: none;
+        padding: 8px 18px;
+        background-color: #F9F9F9;
+    }
+}
+
+list-news {
+    @include setLocation(flex, row, space-between);
+}
+
+item-news{
+    flex-basis: 32%;
+    @include setLocation2(flex, column);
+    margin-bottom: 25px;
+
+    figure{
+        flex-basis: 100%;
+        display: flex;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    h3{
+        flex-basis: 100%;
+        @include setFont($pregular, 16px, #323846);
+        padding: 20px 0px 10px 0px;
+    }
+
+    p{
+        flex-basis: 100%;
+        @include setFont($plight, 14px, #323846);
+        padding-bottom: 60px;
+    }
+
+    footer{
+        flex-basis: 100%;
+        @include setLocation(flex, row, flex-end);
+    }
+}
+
+#advertisement{
+    flex-basis: 100%;
+    height: 300px;
+    @include setLocation(flex, column, center);
+    align-items: center;
+    background-image: url("../images/background_advertisement.png");
+    background-position: top center;
+
+    h2{
+        @include setFont($pregular, 30px, #323846);
+        padding-bottom: 8px;
+    }
+
+    p{
+        @include setFont($plight, 16px, #323846);
+        padding-bottom: 35px;
+    }
+
+    form{
+        display: flex;
+    }
+
+    input{
+        width: 280px;
+        padding: 10px;
+        @include setFont($plight, 13px, #323846);
+        border: none;
+    }
+
+    button{
+        padding: 10px 15px;
+        @include setFont($pmedium, 13px, #323846);
+        border: none;
+        background-color: #FCE86D;
+    }
+}
+
+aside h2{
+    @include setFont($pregular, 23px, #323846);
+    padding-bottom: 10px;
+}
+
+#bio{
+    flex-basis: 100%;
+    display: flex;
+    padding: 120px 0px;
+    border-bottom: 1px solid rgba(41,41,41, 0.1);
+
+    header{
+        flex-basis: 50%;
+        @include setLocation(flex, row, center);
+        align-items: center;
+    }
+
+    article{
+        flex-basis: 50%;
+        @include setLocation(flex, column, center);
+        padding-right: 50px;
+
+        figure img{
+            border-radius: 50%;
+            border: 5px solid #96D6F1;    
+        }
+
+        h3{
+            @include setFont($pregular, 16px, #323846);
+            padding: 10px 0px 30px 0px;
+        }
+
+        p{
+            @include setFont($plight, 14px, #323846);
+        }
+
+        ul{
+            padding-top: 15px;
+
+            li{
+                display: inline-block;
+
+                a{
+                    @include setFont($pmedium, 14px, #323846);
+                    text-decoration: none;
+                    display: flex;
+                    padding: 0px 10px;
+
+                    img{
+                        margin-right: 10px;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+.text-visit{
+    padding-top: 32px;
+}
+
+main+footer{
+    max-width: 1366px;
+    width: 100%;
+    @include setLocation(flex, row, space-between);
+    padding: 15px 50px;
+
+    h4{
+        font-family: "poppins regular";
+        color: #323846;
+    }
+}
+
+author-footer{
+    @include setLocation3(flex, center);
+
+    p{
+        @include setFont($plight, 11px, #323846);
+    }
+
+    img{
+        padding: 0px 5px;
+    }
+}
